@@ -1,0 +1,177 @@
+  
+.sidebar .nav-third-level li a {
+    /*the entries of the third menu level should be closer together than default*/
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#page-wrapper{
+    padding: 0px;
+}
+
+
+svg text {
+    fill: black;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+svg .my-edge{
+    fill: none;
+    stroke: black;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin:round;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+svg text.my-header{ 
+    font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+    font-size:  16px;
+    fill: black;
+    text-anchor:middle;
+}
+svg rect.my-header{    
+    stroke-width: 2px;
+    stroke: black;
+}
+
+svg text.my-node{
+    font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    fill: black;
+    text-anchor:middle;
+}
+
+svg text.icon{
+    font-family: FontAwesome;
+}
+
+svg rect.my-node{    
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+    stroke-width: 2px;
+    stroke: black;
+}
+
+svg rect.my-background{
+    padding: 25px;    
+}
+
+svg text.activity.my-node{
+    font-size: 22px;
+}
+
+/* Node & Header colors*/
+
+svg rect.my-background.input-artifact{
+    fill: #dde7f8;    
+}
+svg rect.my-background.activity{
+    fill: #fae4e4;    
+}
+svg rect.my-background.output-artifact{
+    fill: #f8e4d9;    
+}
+svg rect.my-background.role{
+    fill: #defde0;    
+}
+svg rect.my-background.tool{
+    fill: #e8e8e8;    
+}
+
+svg rect.my-node.input-artifact, svg rect.my-header.input-artifact{    
+    fill: #a3c6ff;
+    stroke: #337ab7;
+}
+svg rect.my-node.activity, svg rect.my-header.activity{      
+    fill: #f29393;
+    stroke: #e16767;
+}
+svg rect.my-node.parent, svg rect.my-header.parent{    
+    fill: #f29393;
+    stroke: #e16767;
+}
+svg rect.my-node.output-artifact, svg rect.my-header.output-artifact{    
+    fill: #ffbd99;
+    stroke: #f19e70;
+}
+svg rect.my-node.role, svg rect.my-header.role{    
+    fill: #93f297;
+    stroke: #58c45e;
+}
+svg rect.my-node.tool, svg rect.my-header.tool{    
+    fill: #d1d0d0;
+    stroke: #adacac;
+}
+
+
+/*Details settings*/
+
+.panel.input-artifact {
+    border-color: #337ab7;
+}
+.panel.input-artifact > .panel-heading {
+    font-weight: bold;
+    border-color: #337ab7;
+    background-color: #a3c6ff;
+}
+
+.panel.activity {
+    border-color: #e16767;
+}
+.panel.activity > .panel-heading {
+    font-weight: bold;
+    border-color: #e16767;
+    background-color: #f29393;
+}
+
+.panel.parents {
+    border-color: #e16767;
+}
+.panel.parents > .panel-heading {
+    font-weight: bold;
+    border-color: #e16767;
+    background-color: #f29393;
+}
+
+.panel.output-artifact {
+    border-color: #f19e70;
+}
+.panel.output-artifact > .panel-heading {
+    font-weight: bold;
+    border-color: #f19e70;
+    background-color: #ffbd99;
+}
+
+.panel.role {
+    border-color: #58c45e;
+}
+.panel.role > .panel-heading {
+    font-weight: bold;
+    border-color: #58c45e;
+    background-color: #93f297;
+}
+
+.panel.tool {
+    border-color: #adacac;
+}
+.panel.tool > .panel-heading {
+    font-weight: bold;
+    border-color: #adacac;
+    background-color: #d1d0d0;
+}
+
+/*.svg-container {
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: visible;
+}*/

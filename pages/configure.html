@@ -1,0 +1,112 @@
+
+<div class="row">
+    <!-- .panel-body -->
+
+    <div class="col-lg-12">
+        <div>   
+            <!--<div class="panel panel-primary">-->
+            <!--            <div class="panel-heading">
+                            System Configuration            
+                        </div>-->
+            <!-- .panel-heading   -->
+
+            <div class="panel-body">
+
+                <!--                <ul class="pagination pagination-sm" >
+                                    <li ng-repeat="page in pages"
+                                        ng-class="currentPage === page ? 'active' : ''" >
+                                        <a href=""   ng-click="paginate(page)">{{pages.indexOf(page) + 1}}</a>
+                                    </li>   
+                                </ul>-->
+
+                <div id="accordion"
+                     class="panel-group">
+                    <div ng-if="d3ConstraintData.indexOf(currentPage) !== -1"
+                         style="max-width:970px"
+                         class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">{{currentPage.title}}</h4>
+                        </div>
+                        <div 
+                            id="{{currentPage.id}}"
+                            class="panel-collapse collapse in">
+                            <div class="panel-body">
+
+                                <span ng-bind-html="currentPage.description"></span>
+
+                                <div class="form-group" >
+                                    <div ng-repeat="constraint in currentPage.constraints" 
+                                         class="form-group" >
+                                        <label> {{constraint.title}} </label>
+                                        <br>
+                                        <span ng-bind-html="constraint.description"></span>
+
+                                        <div ng-if="!constraint.isMulti" 
+                                             class="radio" style="margin-left:10px" ng-repeat="value in constraint.uivalues" >
+                                            <label> 
+                                                <input type="radio" 
+                                                       ng-change="onConstraintChange(false, constraint.id, value.id)"
+                                                       ng-model="d3ConstraintValue[constraint.id]" 
+                                                       ng-value="d3ConstraintValues[constraint.id][value.id]">
+                                                {{value.id}}</label>
+                                        </div>
+
+                                        <div ng-if="constraint.isMulti" 
+                                             class="checkbox" style="margin-left:10px" ng-repeat="value in constraint.uivalues">
+                                            <label> 
+                                                <input type="checkbox"                          
+                                                       ng-change="onConstraintChange(true, constraint.id, value.id)"
+                                                       ng-model="d3ConstraintValue[constraint.id][value.id]" >
+                                                {{value.text}} </label>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <br>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--ng-if="currentPage === 'END'" -->
+                    <div  ng-if="currentPage === 'END'"
+                          class="panel panel-info">
+                        <div class="panel-heading">
+                            Tailored Method
+                        </div>
+
+                        <!-- .panel-heading -->
+                        <div class="panel-body supersedeGraph" >
+                            <div flat-graph data="d3Data" on-click="d3OnClick(item)"></div>
+                        </div>
+
+                        <button
+                            type="button"
+                            style="display: table; margin: 0 auto;"
+                            ng-click="downloadPdf()"
+                            class="btn  btn-primary btn-ellipse ">
+                            <i class="fa fa-print"></i> Export Deployment Descriptor             </button>
+                        <div style="height:10px"></div>
+                        Note: If you've not made any change to the constraints,
+                        the above and resulting pdf contain all content
+                        (this bug is on purpose for easier testing and typo checking).
+
+
+                    </div>
+
+                    <ul class="pager" ng-style="currentPage === 'END' ? {} : {'max-width': '950px'}">
+                        <li ng-class="pages.indexOf(currentPage) > 0 ? '' : 'disabled'">
+                            <a href="" ng-click="paginatePrev()">Previous</a></li>
+                        {{pages.indexOf(currentPage) + 1}}/{{pages.length}}
+                        <li ng-class="pages.indexOf(currentPage) + 1 < pages.length ? '' : 'disabled'"><a href="" ng-click="paginateNext()">Next</a></li>
+                    </ul> 
+
+
+                </div> 
+            </div>
+
+        </div>
+    </div>
+
+</div>

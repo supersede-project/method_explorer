@@ -1,0 +1,15 @@
+<div class="row panel-body" >
+    <div class="col-lg-12" style="max-width:1024px;min-height:0" ng-repeat="selectedNode in d3Data.nodes| filter: {isActivity:true} : true">
+        <div ng-show="!routeParams.phase || routeParams.phase === d3Data.htmlDetails[selectedNode.id].phase" class="panel activity" >
+            <div id="{{d3Data.htmlDetails[selectedNode.id].id}}" class="panel-heading">{{d3Data.htmlDetails[selectedNode.id].title}}</div>
+            <div class="panel-body"> 
+                <div class="row">
+                    <div style="margin-bottom: 5px" class="col-lg-12" ng-repeat="entry in d3Data.htmlDetails[selectedNode.id].content track by $index">
+                        <label style="margin-bottom: 0px">{{entry.key}}</label> <span ng-bind-html="entry.value"> </span>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>    
+</div>  
+<div style="display:block; height:800px"></div><!-- adding some blank space at bottom so that linked elements are always at the top-->

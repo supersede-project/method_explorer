@@ -1,0 +1,200 @@
+,,,
+ID:,ART-WP1-01,,
+Name:,Monitoring data,,
+MAPE phase:,Monitor,,
+Responsible:,Marc and Norbert,,
+Description:,"It describes the data gathered by monitors about the use of the system. Such data can be for instance quality of service, usage data or indirect feedback.",,XF reminder: one option in the future is consider bug report and feature request as specializations of Feedback document
+Category:,File::Json,,
+Related artifacts:,,,
+,,,
+ID:,ART-WP1-02,,
+Name:,Feedback document,,
+MAPE phase:,Monitor,,
+Responsible:,Norbert and Marc,,
+Description:,"It describes the feedback given by an end-user using different media (e.g., text, screenshot, audio). Such feedback could for example describe a bug report or feature request.",,XF reminder: one option in the future is consider bug report and feature request as specializations of Feedback document
+Category:,File::Database entry,,
+Related artifacts:,,,
+,,,
+ID:,ART-WP2-01,,
+Name:,Integration-oriented Ontology,,
+MAPE phase:,Analyse,,
+Responsible:,Sergi & Alberto,,
+Description:,"The integration-oriented ontology is a two-level ontology to aid data analysts to query the data sources via an ontology-based representation of the domain of interest (i.e., domain ontology). In a Big Data context, where Variety and Variability must be considered first-class citizens, such two levels are linked via local-as-view mappings.",,
+Category:,Model::Ontology,,
+Related artifacts:,"<Event Queue Endpoint<ART-WP2-02>>, <Complex Event Pattern<ART-WP2-03>>",,
+,,,
+ID:,ART-WP2-02,,
+Name:,Event Queue Endpoint,,
+MAPE phase:,Analyse,,
+Responsible:,Sergi & Alberto,,
+Description:,An event queue endpoint represents an identifier in the Event Queue where FAME can push monitoring and feedback data.,,
+Category:,Technology::WebResource,,"SN: Not sure about Streaming platform. This would be a good category for the tool ""Event Queue"", the endpoint is just an ID "
+Related artifacts:,"<Integration-oriented Ontology<ART-WP2-01>>, <Complex Event Pattern<ART-WP2-03>>",,
+,,,
+ID:,ART-WP2-03,,
+Name:,Complex Event Pattern,,
+MAPE phase:,Analyse,,
+Responsible:,Sergi & Alberto,,
+Description:,"A complex event pattern represents analytical sequences of events expressed using the terminology defined in the integrated ontology, that will raise alerts of situations of interest to decision makers.",,
+Category:,Expression::Query,,
+Related artifacts:,"<Integration-oriented Ontology<ART-WP2-01>>, <Event Queue Endpoint<ART-WP2-02>>",,
+,
+ID:,ART-WP3-01
+Name:,Requirement
+MAPE phase:,Plan
+Responsible:,Alberto
+Description:,A requirement to be managed during the decision-making process containing information about its dependencies and an informal descriptions.
+Category:,Text::StructuredText
+Related artifacts:,
+,
+ID:,ART-WP3-02
+Name:,List of requirements
+MAPE phase:,Plan
+Responsible:,Alberto
+Description:,"A list of requirements, not required to fulfil any property."
+Category:,Dataset::StructuredText
+Related artifacts:,Aggregates: Requirement 
+,
+ID:,ART-WP3-03
+Name:,Prioritized list of requirements
+MAPE phase:,Plan
+Responsible:,Alberto
+Description:,The list of prioritized requirements after a requirements prioritization activity.
+Category:,Dataset::StructuredText
+Related artifacts:,Specializes: List of requirements
+,
+ID:,ART-WP3-04
+Name:,List of similar requirements
+MAPE phase:,Plan
+Responsible:,Alberto
+Description:,The list of similar requirements after similarity check.
+Category:,Dataset::StructuredText
+Related artifacts:,Specializes: List of requirements
+,
+ID:,ART-WP3-05
+Name:,Feature Model
+MAPE phase:,Plan
+Responsible:,Yosu Gorroñogoitia
+Description:,"A tree-shape organization of features representing the potential schema (or metamodel) of functionality (or functional structure) of a software system, as well as the constraints and inter-dependencies among them."
+Category:,Model::FeatureModel
+Related artifacts:,
+,
+ID:,ART-WP3-06
+Name:,Feature Configuration
+MAPE phase:,Plan
+Responsible:,Yosu Gorroñogoitia
+Description:,"A concrete valid instantiation of a Feature Model, that selects (i.e. enables) some of the features of the Feature Model, observing the constraints stated in that model."
+Category:,Model::FeatureModel
+Related artifacts:,Constrains: Feature Model
+,
+ID:,ART-WP3-07
+Name:,Alert
+MAPE phase:,Plan
+Responsible:,Alberto
+Description:,The alert manged by the decision making tool containing a syntheses of the user feedback.
+Category:,Dataset::StructuredText
+Related artifacts:,
+,
+ID:,ART-WP4-01
+Name:,Release plan
+MAPE phase:,Enact - evolution
+Responsible:,David Ameller
+Description:,"A release plan is a dataset that relates the available development resources with prioritized list of requirements. This relationship is an assignment of development tasks to the resources in a period taking into account restrictions (e.g. the availability of the resources) and objectives (e.g., finalize high priority requirements first)."
+Category:,Dataset::Mapping
+Related artifacts:,includes a set of <Resource usage<ART-WP4-02>>
+,
+ID:,ART-WP4-02
+Name:,Resource usage
+MAPE phase:,Enact - evolution
+Responsible:,David Ameller
+Description:,A resource usage is a dataset that indicates the amount of effort planned for a development resource.
+Category:,Dataset::Mapping
+Related artifacts:,
+,
+ID:,ART-WP4-03
+Name:,Development resource information
+MAPE phase:,Enact - evolution
+Responsible:,David Ameller
+Description:,"A resource information is a dataset that defines the properties of a development resource (e.g., its availability)."
+Category:,Entity
+Related artifacts:,
+,
+ID:,ART-WP4-04
+Name:,Feedback gathering reconfiguration plan 
+MAPE phase:,Enact - adaptation
+Responsible:,"David Ameller, Yosu, Marc Oriol"
+Description:,A Feedback gathering reconfiguration plan is a technologically independent model that defines the configuration that the feedback gathering tool should have.
+Category:,Model
+Related artifacts:,Specializes <Reconfiguration plan<ART-WP4-12>>
+,
+ID:,ART-WP4-05
+Name:,Feedback gathering reconfiguration instruction 
+MAPE phase:,Enact - adaptation
+Responsible:,"David Ameller, Yosu, Marc Oriol"
+Description:,A Feedback gathering reconfiguration instruction is a technologically dependent configuration that is used as input to reconfigure the feedback gathering tool.
+Category:,Instruction/File
+Related artifacts:,Specializes <Reconfiguration instruction<ART-WP4-13>>
+,
+ID:,ART-WP4-06
+Name:,Monitoring reconfiguration plan 
+MAPE phase:,Enact - adaptation
+Responsible:,Marc Oriol
+Description:,A Monitoring reconfiguration plan is a technologically independent model that defines the configuration that a monitor should have.
+Category:,Model/File
+Related artifacts:,Specializes <reconfiguration plan<ART-WP4-12>>
+,
+ID:,ART-WP4-07
+Name:,Monitoring reconfiguration instruction 
+MAPE phase:,Enact - adaptation
+Responsible:,Marc Oriol
+Description:,A Monitoring reconfiguration instruction is a technologically dependent configuration that is used as input to reconfigure a monitor of SUPERSEDE.
+Category:,Instruction/File
+Related artifacts:,Specializes <reconfiguration instruction<ART-WP4-13>>
+,
+ID:,ART-WP4-08
+Name:,System base model (UML)
+MAPE phase:,Enact - adaptation
+Responsible:,Yosu Gorroñogoitia
+Description:,"UML model representation (high abstraction level) of an adaptive system (or a part), focusing of the adaptable elements of the system."
+Category:,File
+Related artifacts:,<Variant model (UML)<ART-WP4-09>>
+,
+ID:,ART-WP4-09
+Name:,Variant model (UML)
+MAPE phase:,Enact - adaptation
+Responsible:,Yosu Gorroñogoitia
+Description:,"UML model representation (high abstraction level) representing a possible variant (structural, behavioral) of the system execution, compatible in terms of architecture compatibility with the base model."
+Category:,File
+Related artifacts:,<System base model (UML)<ART-WP4-08>>
+,
+ID:,ART-WP4-10
+Name:,Adaptability model (AOM)
+MAPE phase:,Enact - adaptation
+Responsible:,Yosu Gorroñogoitia
+Description:,"SUPERSEDE AOM model representation of an adaptation, associated to a Feature, that relates it to an compatible Variant model and contains instructions to enable/disable this Variant into the Base Model."
+Category:,File
+Related artifacts:,"<Variant model (UML)<ART-WP4-09>>, <Feature Model<ART-WP3-05>>"
+,
+ID:,ART-WP4-11
+Name:,Adapted System Artifacts 
+MAPE phase:,Enact - adaptation
+Responsible:,Yosu Gorroñogoitia
+Description:,"Platform specific (low abstraction) artifact, consisting on one or more instructions that modifies the behavior of an adaptive system, either by modifying its configuration or by injecting structural changes."
+Category:,Instruction/File
+Related artifacts:,
+,
+ID:,ART-WP4-12
+Name:,Reconfiguration plan 
+MAPE phase:,Enact - adaptation
+Responsible:,David Ameller
+Description:,Reconfiguration plan is a technologically independent model that defines the configuration a tool should have.
+Category:,Model
+Related artifacts:,Specializes Optimal configuration (<Feature Configuration<ART-WP3-06>>/<Feature Model<ART-WP3-05>>)
+,
+ID:,ART-WP4-13
+Name:,Reconfiguration instruction 
+MAPE phase:,Enact - adaptation
+Responsible:,David Ameller
+Description:,Reconfiguration instruction is a technologically dependent configuration that is used as input to reconfigure a tool.
+Category:,Instruction/File
+Related artifacts:,Specializes <Adapted system artifacts<ART-WP4-11>> (platform specific) execution

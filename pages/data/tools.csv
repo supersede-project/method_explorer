@@ -1,0 +1,108 @@
+,
+ID:,TOO-WP1-01
+Name:,FAME
+MAPE phase:,Monitor
+Responsible:,Marc and Norbert
+Description:,FAME monitors system and user behaviour and allows end-users to communicate and document feedback.
+Category:,SUPERSEDE tool
+Involved role(s):,<End user<ROL-WP1-01>>
+Involved artifact(s):,"<Monitoring data<ART-WP1-01>>, <Feedback document<ART-WP1-02>>"
+Related tools:,
+,
+ID:,TOO-WP2-01
+Name:,Metadata Management System (MDM)
+MAPE phase:,Analyse
+Responsible:,Sergi & Alberto
+Description:,The Metadata Management System is an end-to-end solution that provides support during the Big Data integration lifecycle.
+Category:,SUPERSEDE tool
+Involved role(s):,"<Data steward<ROL-WP2-01>> (involved in the introduction of new data sources (using as input example datasets from FAME) and their subsequent integration into the ontology), <Data analyst<ROL-WP2-02>> (involved in the introduction of complex event patterns to detect new situations of interest)."
+Involved artifact(s):,"<Integration-oriented Ontology<ART-WP2-01>>, <Event Queue Endpoint<ART-WP2-02>>, <Complex Event Pattern<ART-WP2-03>>"
+Related tools:,"Works-with: <FAME<TOO-WP1-01>>, <CERP<TOO-WP2-03>>"
+,
+ID:,TOO-WP2-02
+Name:,Event Queue (EQ)
+MAPE phase:,Analyse
+Responsible:,Sergi & Alberto
+Description:,"An Event Queue is a tool that acts as a distributed memory or disk-based storage buffer, where streams are temporarily stored."
+Category:,Open source tool (Apache Kafka)
+Involved role(s):,
+Involved artifact(s):,<Event Queue Endpoint<ART-WP2-02>>
+Related tools:,"Fed-by: <FAME<TOO-WP1-01>>, Works-with: <MDM<TOO-WP2-01>>, <CERP<TOO-WP2-03>>"
+,
+ID:,TOO-WP2-03
+Name:,Complex Event Recognition Processor (CERP)
+MAPE phase:,Analyse
+Responsible:,Sergi & Alberto
+Description:,The Complex Event Recognition Processor evaluates the Complex Event Patterns that have been defined in MDM based on the data that are pushed to the Event Queues.
+Category:,SUPERSEDE tool
+Involved role(s):,
+Involved artifact(s):,<Complex Event Pattern<ART-WP2-03>>
+Related tools:,"Works-with: <MDM<TOO-WP2-01>>, <EQ<TOO-WP2-02>>, <DMGame<TOO-WP3-01>> (for soft. evol. alerts), DMOptimizer (for dyn. adapt alerts)"
+,,,
+ID:,TOO-WP3-01,,
+Name:,DMGame,,
+MAPE phase:,Plan,,
+Responsible:,Angelo,,
+Description:,"DMGame implements several decision-making activities such as Requirements collaborative editing, Requirements similarity check and Requirements prioritization.",,
+Category:,SUPERSEDE tool,,
+Involved role(s):,"<Decision-making Supervisor<ROL-WP3-02>>: involved in the set-up of the decision procedure
+<Decision-making Negotiator<ROL-WP3-03>>: involved in the phase of negotiation and mediation among the different decision-making Opinion providers
+Decision-making Opinion provider: involved in the decision",,
+Involved artifact(s):,"<Requirements List<ART-WP3-02>>, <Alert<ART-WP3-07>>",,XF: not completely aligned with the declared artifacts ADDED ALERT AS ARTIFACT
+Related tools:,"Works-with: <FAME<TOO-WP1-01>>, <RePlan<TOO-WP4-01>>",,
+,,,
+ID:,TOO-WP3-02,,
+Name:,JIRA,,
+MAPE phase:,Plan,,
+Responsible:,Angelo,,
+Description:,"JIRA manages the feedback and requirements allowing the different roles in collecting, specifying, editing and deciding about these artefacts.",,
+Category:,External tool,,
+Involved role(s):,"<Requirements analyst<ROL-WP3-05>>: involved in the activities related to the specification of requirements.
+<Decision-making Supervisor<ROL-WP3-02>>: involved in the set-up of the decision procedure.",,
+Involved artifact(s):,"<Requirements List<ART-WP3-02>>, <Alert<ART-WP3-07>>",,XF: not completely aligned with the declared artifacts ADDED ALERT AS ARTIFACT
+Related tools:,Works-with: <DMGame<TOO-WP3-01>>,,
+,,,
+ID:,TOO-WP3-03,,
+Name:,Adaptation Decision Making (DM) Optimizer ,,
+MAPE phase:,Planning,,
+Responsible:,"Fitsum Kifetew, Yosu Gorroñogoitia",,
+Description:,"This tool computes an optimal configuration for a supervised adaptive system, in reaction to the reception of an alert triggered by the Analysis platform, informing of a detected anomalous system behavior. The optimal system configuration is computed by exploring the solution space, which satisfies the constraints imposed to the system.",,
+Category:,SUPERSEDE Tool,,
+Involved role(s):,"N/A -- This tool works autonomously, yielding the expected inputs.",,
+Involved artifact(s):,"<Alert<ART-WP3-07>>: describing currently observed system parameter/s.
+<Feature Model<ART-WP3-05>>: variability model of the system.
+<Feature Configuration<ART-WP3-06>>: current configuration of the system.
+ Objective function.
+<Feature Configuration<ART-WP3-06>>: optimal configuration of the system.",,XF: not completely aligned with the declared artifacts ADDED ALERT AS ARTIFACT
+Related tools:,"<Adaptation Enactment Platform<TOO-WP4-02>>, Analysis Data Collector",,
+,
+ID:,TOO-WP4-01
+Name:,RePlan
+MAPE phase:,Enact - evolution
+Responsible:,David Ameller
+Description:,RePlan is a SUPERSEDE tool that provides support to the release planning activity by the use of optimization algorithms to automate the generation of release plans.
+Category:,SUPERSEDE tool
+Involved role(s):,<Project leader<ROL-WP4-01>>
+Involved artifact(s):,<Prioritized list of requirements<ART-WP3-03>>; <Release plan<ART-WP4-01>>; Resource usage
+Related tools:,Works-with: <DMGame<TOO-WP3-01>>
+,
+ID:,TOO-WP4-02
+Name:,Adaptation Enactment Platform (DAPPLE) - Adapter/Enactor
+MAPE phase:,Enact - adaptation
+Responsible:,Yosu Gorroñogoitia
+Description:,This platform converts the optimal configuration passed as input into a adaptive system specific configuration/action and executes it.
+Category:,SUPERSEDE tool
+Involved role(s):,<System Manager/Supervisor<ROL-WP4-05>>
+Involved artifact(s):,"Optimal configuration (<Feature Configuration<ART-WP3-06>>/<Feature Model<ART-WP3-05>>), Current configuration, system base model (UML), variability models (UML), adaptability models (aspect), Adapted system model (UML), <Adapted system artifacts<ART-WP4-11>> (platform specific) execution"
+Related tools:,Works-with: <Adaptation DM Optimizer<TOO-WP3-03>
+,
+ID:,TOO-WP4-03
+Name:,Monitoring and Feedback Gathering Reconfiguration tool
+MAPE phase:,Enact - adaptation
+Responsible:,"Marc Oriol, David Ameller"
+Description:,This platform converts a Monitoring or Feedback Gathering reconfiguration plan passed as input into a Monitoring or Feedback Gathering reconfiguration instruction and executes it. 
+Category:,SUPERSEDE tool
+Involved role(s):,System Manager/Supervisor
+Involved artifact(s):,"<Monitoring reconfiguration plan<ART-WP4-06>>, <Feedback Gathering reconfiguration plan<ART-WP4-04>>, <Monitoring reconfiguration instruction<ART-WP4-05>>, <Feedback Gathering reconfiguration instruction<ART-WP4-07>>"
+Related tools:,"Works-with: <Adaptation DM Optimizer<TOO-WP3-03>>
+Specializes: Adaptation Enactment Platform (<DAPPLE<TOO-WP4-02>>) - Adapter/Enactor"

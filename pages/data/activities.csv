@@ -1,0 +1,458 @@
+ID:,ACT-WP1-01
+Name:,Data collection infrastructure deployment and configuration
+MAPE phase:,Other-Deployment
+Responsible:,Marc and Norbert
+Description:,Deployment of FAME monitoring and feedback gathering components.
+Context:,A software company wants to deploy FAME in order to gather monitoring and feedback data for one or more of their software products.
+Roles involved:,<Project Development Team<ROL-WP4-04>>
+Input artifacts (situation):,<Feedback gathering reconfiguration instruction<ART-WP4-05>>; <Monitoring reconfiguration instruction <ART-WP4-07>>
+Output artifacts:,<FAME <TOO-WP1-01>>
+Intention:,Obtain monitoring and feedback data
+Tools:,none
+Related activities:,
+Configuration instructions:,"The implementation is in the form of a library and a set of web services, the Project Development Team just needs to: 
+1) integrate the feedback library into the Host Application, to do so, the developer inserts a few lines of code into the application code to invoke the functionalities of user feedback acquisition. As an example for a web application, the piece of code includes a few links to stylesheets and scripts, as well as a hyperlink to the feedback button. 
+2) deploy the web services into a server (e.g. Tomcat).
+3) For some monitoring Tools, the Project Development Team should also complete the following integration activities: the user events monitoring tool requires the integration of JavaScript code in the Host Application. The infrastructure monitoring tool requires credentials to access the server to monitor through SSH."
+,
+ID:,ACT-WP1-01a
+Name:,Feedback gathering manual configuration
+MAPE phase:,Other-Deployment
+Responsible:,Norbert and Marc
+Description:,The FAME feedback gathering components are configured in a way that they fulfill the needs of the software company and the end-users.
+Roles involved:,<Project Development Team<ROL-WP4-04>>
+Context:,The software company wants to tailor FAME to their needs.
+Input artifacts:,<Feedback gathering reconfiguration instruction<ART-WP4-05>>
+Output artifacts:,none (FAME is configured)
+Intention:,Obtain feedback data
+Tools:,<FAME<TOO-WP1-01>>
+Related activities:,Specializes: <Data collection infrastructure deployment<ACT-WP1-01>>
+Configuration instructions:,Configure the feedback dialogue and decide on the trigger mechanisms.
+Configuration instructions:,"(inherits the configuration instructions from ACT-WP1-01) + Once the deployed, the Project Development Team needs to configure the Feedback Gathering Tool as specified in https://supersedeorchestratorapi.docs.apiary.io/"
+,
+ID:,ACT-WP1-01b
+Name:,Monitoring tool manual configuration
+MAPE phase:,Other-Deployment
+Responsible:,Norbert and Marc
+Description:,The FAME monitoring components are configured in a way that they fulfill the needs of the software company and the end-users.
+Roles involved:,<Project Development Team<ROL-WP4-04>>
+Context:,The software company wants to tailor FAME to their needs.
+Input artifacts (situation):,<Monitoring reconfiguration instruction<ART-WP4-07>>
+Output artifacts:,none (<FAME<TOO-WP1-01>> is configured)
+Intention:,Obtain monitoring data.
+Tools:,<FAME<TOO-WP1-01>>
+Related activities:,Specializes: <Data collection infrastructure deployment<ACT-WP1-01>>
+Configuration instructions:,"(inherits the configuration instructions from ACT-WP1-01) + Once the deployed, the Project Development Team needs to configure the Monitors as specified in https://supersedeorchestratorapi.docs.apiary.io/"
+,
+ID:,ACT-WP1-02
+Name:,Feedback collection
+MAPE phase:,Monitor
+Responsible:,Norbert and Marc
+Description:,"An end-user enters feedback via a feedback component. The end-user can use the input mechanisms provided by the feedback components (e.g., text, screenshot, audio) to describe her feedback. "
+Roles involved:,<End-user<ROL-WP1-01>>
+Context:,An end-user want to communicate her experience about the software application to the software development company.
+Input artifacts:,"none - human input (e.g., text, screenshots, audio)"
+Output artifacts:,<Feedback document<ART-WP1-02>>
+Intention:,Obtain feedback data.
+Tools:,<FAME<TOO-WP1-01>>
+Related activities:,Requires: <Feedback gathering manual configuration<ACT-WP1-01a>>
+,
+ID:,ACT-WP1-03
+Name:,Monitoring data collection
+MAPE phase:,Monitor
+Responsible:,Marc and Norbert
+Description:,An end-user or system generates runtime events which are collected by different monitors which generate monitoring data.
+Context:,"- The company provides a service or a web platform where it is required to ensure the Quality of Service.
+- The company provides a service or a web platform and is interested to know how the users interact with the system."
+Roles involved:,<End-user<ROL-WP1-01>> (in most cases for gathering end-user related info)
+Input artifacts (situation):,none - runtime events
+Output artifacts:,<Monitoring data<ART-WP1-01>>
+Intention:,Obtain runtime system data.
+Tools:,<FAME<TOO-WP1-01>>
+Related activities:,Requires: <Monitoring tool manual configuration<ACT-WP1-01b>>
+,
+ID:,ACT-WP1-03a
+Name:,QoS monitoring
+MAPE phase:,Monitor
+Responsible:,Marc and Norbert
+Description:,A system generates QoS information which is collected by different monitors which generate monitoring data.
+Context:,The company provides a service or a web platform where it is required to ensure the Quality of Service.
+Roles involved:,none
+Input artifacts (situation):,none - QoS related events
+Output artifacts:,Monitoring data
+Intention:,Obtain system QoS.
+Tools:,<FAME<TOO-WP1-01>>
+Related activities:,Specializes: <Monitoring Data Collection<ACT-WP1-03>>
+,
+ID:,ACT-WP1-03b
+Name:,Social network monitoring
+MAPE phase:,Monitor
+Responsible:,Marc and Norbert
+Description:,"End-users communicate feedback through Social Networks (e.g. twitter), which is collected by the Social network monitor."
+Context:,The end-user has a twitter account and wants to communicate her experience with the software to a broader audience using Social-Networks.
+Roles involved:,<End-users<ROL-WP1-01>> (with twitter account)
+Input artifacts (situation):,none - human input (the tweet)
+Output artifacts:,Monitoring data (Social Network data (i.e. the tweet + metadata))
+Intention:,Obtain the opinion and feedback from end-users in Social Networks.
+Tools:,<FAME<TOO-WP1-01>>
+Related activities:,Specializes: <Monitoring Data Collection<ACT-WP1-03>>
+,
+ID:,ACT-WP1-03c
+Name:,Usage monitoring
+MAPE phase:,Monitor
+Responsible:,Marc and Norbert
+Description:,A system monitors user behaviour. i.e. the actions between the user and the software system.
+Context:,The end-user allows that her actions are being monitored in order to improve the quality of the software (privacy issues).
+Roles involved:,<End-user<ROL-WP1-01>>
+Input artifacts (situation):,none - any interaction that the end-user has with the software system.
+Output artifacts:,Monitoring data (i.e. the event + metadata)
+Intention:,Understand how the end-users interact with the software.
+Tools:,<FAME<TOO-WP1-01>>
+Related activities:,Specializes: <Monitoring Data Collection<ACT-WP1-03>>
+,
+ID:,ACT-WP2-01
+Name:,Big Data management infrastructure deployment
+MAPE phase:,Analyse
+Responsible:,Sergi & Alberto
+Situation,The deployment of the Big Data management infrastructure happens when the SUPERSEDE platform is setup.
+Description:,"Activity where the data steward installs all necessary Big Data tools composing the instantiation of the Big Data architecture (i.e., Metadata Management System, Event Queue, Complex Event Recognition Processor)."
+Roles involved:,<Data steward<ROL-WP2-01>>
+Input artifacts:,
+Output artifacts:,
+Intention,"1) Dimension the data to be gathered and their corresponding processes.
+2) Analyze the requirements of each architectural component.
+3) Study the different component candidate implementations existing in the market.
+4) Choose the most appropriate implementation for each component.
+5) Deploy and connect the selected components."
+Tools:,"<MDM<TOO-WP2-01>>, <EQ<TOO-WP2-02>>, <CERP<TOO-WP2-03>>"
+Related activities:,
+,
+ID:,ACT-WP2-02
+Name:,Domain Ontology Definition
+MAPE phase:,Analyse
+Responsible:,Sergi & Alberto
+Situation,"The domain ontology is defined when setting up the SUPERSEDE lifecycle. The data steward must interact with the domain experts of a company or organization in order to derive a conceptualization of the domain of interest, that will further be used to obtain data."
+Description:,Activity where the data steward defines the main concepts in the software tools being used as well as the business domain.
+Roles involved:,<Data steward<ROL-WP2-01>>
+Input artifacts:,
+Output artifacts:,A domain ontology containing all concepts to be monitored as well as those potentially used in user feedback.
+Intention,"1) Study and conceptualize the domain;
+2) Code the domain concepts and relationships in RDF;"
+Tools:,<MDM<TOO-WP2-01>>
+Related activities:,
+,
+ID:,ACT-WP2-03
+Name:,Definition of complex event recognition rules
+MAPE phase:,Analyse
+Responsible:,Sergi & Alberto
+Description:,Activity where the data analyst defines patterns potentially combining conditions over events generated by either monitors or feedback gathering tools.
+Situation,This activity is performed upon the need of a decision maker to detect a new situation of interest (described by means of a pattern of events).
+Roles involved:,<Data analyst<ROL-WP2-02>>
+Input artifacts:,Integration-oriented ontology
+Output artifacts:,Complex Event Pattern
+Intention,"1) Study the domain.
+2) Create statistical models (if needed).
+3) Find interesting rules for both software evolution and adaptation.
+4) Declare the rules."
+Tools:,"<MDM<TOO-WP2-01>>, <CERP<TOO-WP2-03>>"
+Related activities:,
+,
+ID:,ACT-WP2-04
+Name:,Source Ontology Extraction
+MAPE phase:,Analyse
+Responsible:,Sergi & Alberto
+Description:,Activity where the data steward adds new data sources of both monitoring and feedback data in order to integrate them to enable analysis.
+Situation,"This activity is performed at any time a new instance of a FAME component (e.g., a monitor or feedback gathering tool) is released."
+Roles involved:,<Data steward<ROL-WP2-01>>
+Input artifacts:,Example JSON documents for monitoring and feedback data sources and mappings to the domain ontology
+Output artifacts:,"An integrated ontology that represents the integrated schema of all input data sources.
+For each of the sources, an event queue endpoint where to push such data (i.e., topic to be subscripted in a queuing system)."
+Intention,"1) Define an event queue endpoint.
+2) Take a sample of input message and register it in MDM with the corresponding endpoint.
+3) Map the provided attributes to the corresponding features in the domain ontology.
+3) Connect the source to the endpoint."
+Tools:,"<MDM<TOO-WP2-01>>, <EQ<TOO-WP2-02>>"
+Related activities:,"Requires: <Feedback collection<ACT-WP1-02>>, <Monitoring data collection<ACT-WP1-03>>, <Extract Source Ontology<ACT-WP2-04>>"
+,
+ID:,ACT-WP2-05
+Name:,Event and pattern detection
+MAPE phase:,Analyse
+Responsible:,Sergi & Alberto
+Description:,"Activity where the Complex Event Recognition Processor (CERP) processes the incoming data (i.e., monitoring data and feedback documents) and detects complex patterns to raise alerts."
+Situation,This activity is performed upon the need of a decision maker to detect a new situation of interest (described by means of a pattern of events).
+Roles involved:,<Data analyst<ROL-WP2-02>>
+Input artifacts:,"<Monitoring data<ART-WP1-01>>, <Feedback document<ART-WP1-02>>"
+Output artifacts:,<Alert<ART-WP3-07>>
+Intention,"This is an automatic activity that happens in the backstage when an event is received, which is then automatically processed and potentially raises one or more alerts based on the predefined rules."
+Tools:,"<MDM<TOO-WP2-01>>, <CERP<TOO-WP2-03>>"
+Related activities:,"Requires: < Data collection infrastructure deployment and configuration <ACT-WP1-01>>, <Big Data management infractructure deployment <ACT-WP2-01>>, <Definition of complex event recognition rules <ACT-WP2-03>>, <Source Ontology Extraction <ACT-WP2-04>>"
+,
+ID:,ACT-WP3-01
+Name:,Decision making infrastructure deployment
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The activity is related to the set-up of a decision-making process infrastructure.
+Description of use:,"Proceed to the descriptions provided in ""Installation as a service"" and ""Decision process set-up""."
+Situation:,The organisation is deploying the DM infrastructure.
+Roles involved:,<Decision-making Supervisor<ROL-WP3-02>>
+Input artifacts:,<DMGame<TOO-WP3-01>>
+Output artifacts:,
+Tools:,"Decision-making web-based tool (<DMGame<TOO-WP3-01>>), <JIRA<TOO-WP3-02>>"
+Related activities:,
+,
+ID:,ACT-WP3-01a
+Name:,Installation as a service
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The activity is related to the installation of the DMGame as a service.
+Description of use:,Go to the Github repository: https://github.com/supersede-project/dm_game. Follow the instructions to instal the component.
+Situation:,The organisation has to establish a set of decision-making processes.
+Roles involved:,<Decision-making Supervisor<ROL-WP3-02>>
+Input artifacts:,<DMGame<TOO-WP3-01>>
+Output artifacts:,
+Tools:,"Decision-making web-based tool (<DMGame<TOO-WP3-01>>), <JIRA<TOO-WP3-02>>"
+Related activities:,<Decision making infrastructure deployment<ACT-WP3-01>>
+,
+ID:,ACT-WP3-01b
+Name:,Decision process set-up
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The activity is related to the set-up of a decision-making process.
+Description of use:,"Proceed inside the JIRA tool and configure the elements of a decision-process (name of the decision-process, selection of the requirements to be analysed, selection of the alerts to be considered in the decision process)."
+Situation:,The organisation having a DMGame set-up is now instantiating it with the data that characterize the decision-making process.
+Roles involved:,<Decision-making Supervisor<ROL-WP3-02>>
+Input artifacts:,"Roles, <requirement list<ART-WP3-02>>"
+Output artifacts:,
+Tools:,"Decision-making web-based tool (<DMGame<TOO-WP3-01>>), <JIRA<TOO-WP3-02>>"
+Related activities:,<Decision making infrastructure deployment<ACT-WP3-01>>
+,
+ID:,ACT-WP3-02
+Name:,Requirements decision activity
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The requirements analyst and decision-makers have to perform a requirements management activity.
+Description of use:,
+Situation:,
+Roles involved:,"<Decision-making Supervisor<ROL-WP3-02>>, <Decision-making Negotiator<ROL-WP3-03>>, <Decision-making Decision Provider<ROL-WP3-04>>, <Requirements analyst<ROL-WP3-05>>"
+Input artifacts:,<Requirement<ART-WP3-01>> or <List of requirements<ART-WP3-02>> 
+Output artifacts:,<Requirement<ART-WP3-01>> or <List of requirements<ART-WP3-02>> 
+Tools:,"Decision-making web-based tool (<DMGame<TOO-WP3-01>>), <JIRA<TOO-WP3-02>>"
+Related activities:,
+,
+ID:,ACT-WP3-02a
+Name:,Requirements collaborative editing
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,"The activity is related to the editing of requirements properties (Id, Name, Description, ...)."
+Description of use:,"In JIRA provide the different properties of a requirement such as Id, Name, Description, ...; Insert also the link to the Alerts the requirement derives from in order to assure the traceability between the original feedback and the requirements derived from it."
+Situation:,The context is that of specifying or refine a requirement or a List of requirements also in a collaborative way by Requirements analysts.
+Roles involved:,<Requirements analyst<ROL-WP3-05>>
+Input artifacts:,<Requirement<ART-WP3-01>> (with requirement dependencies) 
+Output artifacts:,<Requirement<ART-WP3-01>>
+Tools:,Decision-making web-based tool (<DMGame<TOO-WP3-01>>) implementing the Genetic Algorithm
+Related activities:,Specializes: <Requirements decision activity<ACT-WP3-02>>
+,
+ID:,ACT-WP3-02b
+Name:,Requirements similarity check
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The activity is related to the identification of similar requirements in the list of requirements.
+Description of use:,In JIRA choose the functionality for the similarity check between the alerts and the requirements selecting a set of requirements; this selection starts the process of similarity check between the set (or a subset) of feedbacks and the selected requirements.
+Situation:,The context is the need of a Requirements analyst of checking the syntactic / semantics similarity between a requirement and a List of requirements.
+Roles involved:,<Requirements analyst<ROL-WP3-05>>
+Input artifacts:,"<Requirement<ART-WP3-01>>, <List of requirements<ART-WP3-02>> "
+Output artifacts:,<List of similar Requirements<ART-WP3-04>>
+Tools:,Decision-making web-based tool (<DMGame<TOO-WP3-01>>) implementing the Genetic Algorithm
+Related activities:,Requires: <Requirements collaborative editing<ACT-WP3-02a>>; Specializes: <Requirements decision activity<ACT-WP3-02>>
+,
+ID:,ACT-WP3-02c
+Name:,Requirements prioritization
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The activity is related to the requirements prioritization different techniques.
+Description of use:,Select the DMGame tool with the selected requirements to start the prioritisation process.
+Situation:,The decision-makers have to identify the mandatory and most promising requirements to be implemented.
+Roles involved:,"<Decision-making Supervisor<ROL-WP3-02>>, <Decision-making Negotiator<ROL-WP3-03>>, <Decision-making Decision Provider<ROL-WP3-04>>"
+Input artifacts:,"<List of requirements<ART-WP3-02>> (with requirements dependencies) List of criteria (with importance of the criteria) List of opinion-providers (with expertise of each opinion-provider on each criterion), preferences"
+Output artifacts:,<Prioritized list of requirements<ART-WP3-03>>
+Intention:,Prioritise requirements
+Tools:,Decision-making web-based tool (<DMGame<TOO-WP3-01>>)
+Related activities:,"Specializes: <Requirements decision activity<ACT-WP3-02>>
+Requires: <Requirements collaborative editing<ACT-WP3-02a>>, <Requirements similarity check<ACT-WP3-02b>>"
+,
+ID:,ACT-WP3-02c1
+Name:,Requirements prioritization via AHP
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The activity is related to the requirements prioritization via pairwise comparison techniques (in particular with the Analytic Hierarchy Process).
+Description of use:,Inside DMGame tool select the AHP algorithm as the algorithms to let decision-makers express their preferences in a pairwise fashion.
+Situation:,"The decision-makers have to identify the mandatory and most promising requirements to be implemented. The number of requirements to decide on is small (in general less than 15). The number of criteria could be relevant. The cognitive effort should be minimised so using a ""pairwise"" comparisons method."
+Roles involved:,"<Decision-making Supervisor<ROL-WP3-02>>, <Decision-making Negotiator<ROL-WP3-03>>, <Decision-making Decision Provider<ROL-WP3-04>>"
+Input artifacts:,"<List of requirements<ART-WP3-02>> (with requirements dependencies) List of criteria (with importance of the criteria) List of opinion-providers (with expertise of each opinion-provider on each criterion), pairwise preferences"
+Output artifacts:,<Prioritized list of requirements<ART-WP3-03>>
+Tools:,Decision-making web-based tool (<DMGame<TOO-WP3-01>>) implementing the Analytic Hierarchy Process
+Related activities:,"Specializes: <Requirements Prioritization<ACT-WP3-02c>>
+Requires: <Requirements collaborative editing<ACT-WP3-02a>>, <Requirements similarity check<ACT-WP3-02b>>"
+,
+ID:,ACT-WP3-02c2
+Name:,Requirements prioritization via Genetic Algorithm
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The activity is related to the requirements prioritization via Genetic Algorithm techniques (in particular NSGAII multi-objective techniques).
+Description of use:,Inside DMGame tool select the Genetic Algorithm algorithm as the algorithms to let decision-makers express their preferences in a list based fashion.
+Situation:,The decision-makers have to identify the mandatory and most promising requirements to be implemented. The number of requirements to decide is also larger than 15. Requirements have soft and hard dependencies among them. The number of criteria could be relevant. The objective is that of having an automated method to find a ranking that maximises the agreement among decision-makers .
+Roles involved:,"<Decision-making Supervisor<ROL-WP3-02>>, <Decision-making Negotiator<ROL-WP3-03>>, <Decision-making Decision Provider<ROL-WP3-04>>"
+Input artifacts:,"<List of Requirements<ART-WP3-02>>  (with requirements dependencies) List of criteria (with importance of the criteria) List of opinion-providers (with expertise of each opinion-provider on each criterion), list of priority from users"
+Output artifacts:,<Prioritized list of requirements<ART-WP3-03>>
+Tools:,Decision-making web-based tool (<DMGame<TOO-WP3-01>>) implementing the Genetic Algorithm
+Related activities:,"Specializes: <Requirements Prioritization<ACT-WP3-02c>>
+Requires: <Requirements collaborative editing<ACT-WP3-02a>>, <Requirements similarity check<ACT-WP3-02b>>"
+,
+ID:,ACT-WP3-02c3
+Name:,Requirements prioritization with gamified AHP
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The activity is related to the requirements prioritization via pairwise comparison techniques (in particular with the Analytic Hierarchy Process) and gamification techniques (such as pointsification).
+Description of use:,Inside DMGame tool select the Gamified AHP algorithm as the algorithms to let decision-makers express their preferences in a pairwise fashion.
+Situation:,"The decision-makers have to identify the mandatory and most promising requirements to be implemented. The number of requirements to decide on is small (in general less than 15). The number of criteria could be relevant. The cognitive effort should be minimised so using a ""pairwise"" comparisons method. The motivation should be maximised."
+Roles involved:,"<Decision-making Supervisor<ROL-WP3-02>>, <Decision-making Negotiator<ROL-WP3-03>>, <Decision-making Decision Provider<ROL-WP3-04>>"
+Input artifacts:,"<List of Requirements<ART-WP3-02>> (with requirements dependencies) List of criteria (with importance of the criteria) List of opinion-providers (with expertise of each opinion-provider on each criterion), pairwise preferences"
+Output artifacts:,<Prioritized list of requirements<ART-WP3-03>>
+Tools:,Decision-making web-based tool (<DMGame<TOO-WP3-01>>) implementing the Gamified Analytic Hierarchy Process
+Related activities:,"Specializes: <Requirements Prioritization via AHP<ACT-WP3-02c1>>
+Requires: <Requirements collaborative editing<ACT-WP3-02a>>, <Requirements similarity check<ACT-WP3-02b>>"
+,
+ID:,ACT-WP3-10
+Name:,Adaptive Decision Making (DM)
+MAPE phase:,Planning (DM)
+Responsible:,"Fitsum Kifetew, Yosu Gorroñogoitia"
+Description:,"In this activity an optimal system configuration is computed by exploring the solution space, in reaction to the triggering of a alert informing of an detected anomalous system behavior. The computation of an optimal configuration must satisfied the constraints imposed to the system."
+Description of use:,The activity is automatically invoked by the dynamic tool-chain.
+Situation:,Adaptation DM is requested to computed optimal configurations upon the reception of an alert triggered by the Data Analysis activity because of the detection of an anomalous system behavior (e.g. the violation of a defined rule associated to some monitored system parameters).
+Roles involved:,"N/A This is an automated activity, not mediated by humans"
+Input artifacts:,"<Alert<ART-WP3-07>> (describing currently observed system parameter/s), variability model (<Feature Model<ART-WP3-05>>), current configuration (<Feature Configuration<ART-WP3-06>>), objective function"
+Output artifacts:,Optimal configuration (<Feature Configuration<ART-WP3-06>>)
+Tools:,<Adaptation DM<TOO-WP3-03>>
+Related activities:,"Requires: Analysis, Event triggering"
+,
+ID:,ACT-WP4-01
+Name:,Release planning infrastructure deployment
+MAPE phase:,Enact - evolution
+Responsible:,David Ameller
+Description:,This activity prepares the release planning infrastructure to be ready to be used.
+Description of use:,"Proceed to the descriptions provided in ""Install RePlan tool"" and ""Project configuration for release planning""."
+Context:,An organization wants to use the release planning offered by SUPERSEDE
+Roles involved:,<Project leader<ROL-WP4-01>> and <IT dpt.<ROL-WP4-06>>
+Input artifacts:,<RePlan tool<TOO-WP4-01>> and Project information
+Output artifacts:,Ready to use <RePlan tool<TOO-WP4-01>>
+Intention:,Prepare the infrastructure
+Tools:,Common deployment tools
+Related activities:,integrates <Install tool activity<ACT-WP4-01a>> and <Project configuration<ACT-WP4-01b>> activity
+,
+ID:,ACT-WP4-01a
+Name:,Install RePlan tool
+MAPE phase:,Enact - evolution
+Responsible:,David Ameller
+Description:,This activity installs the RePlan tool.
+Description of use:,"1) Access to our GitHub repositories:
+   a) https://github.com/supersede-project/replan_controller
+   b) https://github.com/supersede-project/replan_optimizer_v2
+   c) https://github.com/supersede-project/replan_dashboard
+2) Follow the compilation and installation instruction for each component described in the README.md of each repository 
+3) Test locally that the RePlan tool is working correctly.
+4) If any incompatibility or error is produced, report an issue in the affected component repository. "
+Context:,An organization wants to use the release planning offered by SUPERSEDE.
+Roles involved:,<IT dpt.<ROL-WP4-06>>
+Input artifacts:,<RePlan tool<TOO-WP4-01>>
+Output artifacts:,<RePlan tool<TOO-WP4-01>> installed
+Intention:,Prepare the infrastructure
+Tools:,Common deployment tools
+Related activities:,Is part of <Release planning infrastructure deployment<ACT-WP4-01>>
+,
+ID:,ACT-WP4-01b
+Name:,Project configuration for release planning
+MAPE phase:,Enact - evolution
+Responsible:,David Ameller
+Description:,This activity configures the a project for release planning.
+Description of use:,"1) Access to the replan tool.
+2) Go to project configuration.
+3) Create the needed skills for the project.
+4) Create the resources for the project (set an availability for each and assign skills)."
+Context:,An organization wants to use the release planning offered by SUPERSEDE
+Roles involved:,<Project leader<ROL-WP4-01>>
+Input artifacts:,Project information
+Output artifacts:,<RePlan tool<TOO-WP4-01>> configured for a particular project
+Intention:,Prepare the infrastructure
+Tools:,<RePlan tool<TOO-WP4-01>>
+Related activities:,Is part of <Release planning infrastructure deployment<ACT-WP4-01>>
+,
+ID:,ACT-WP4-02
+Name:,Release Planning
+MAPE phase:,Enact - evolution
+Responsible:,David Ameller
+Description:,Activity in which a release plan is produced from a set of features.
+Description of use:,"1) Access to the replan tool.
+2) Create a new release (add resources to the release, set the start and end date).
+3) Drag and drop features to the new release.
+4) Visualize the resulting plan by clicking into the release."
+Context:,The company launches the product in successive releases
+Roles involved:,<Project leader<ROL-WP4-01>>
+Input artifacts:,Set of <Prioritized requirement<ART-WP3-03>>; Set of <Development resource information<ART-WP4-03>>
+Output artifacts:,<Release plan<ART-WP4-01>>
+Intention:,Produce a release plan
+Tools:,<RePlan<TOO-WP4-01>>
+Related activities:,Requires <Requirements prioritization<ACT-WP3-02c>>
+,
+ID:,ACT-WP4-10
+Name:,Adaptation Enactment
+MAPE phase:,Enact - adaptation
+Responsible:,Yosu Gorroñogoitia
+Description:,"In this activity an optimal system configuration is enacted (i.e. executed) into the adaptive system. As the configuration is described in a platform independent fashion, its conversion into a platform specific format is required, prior to be enacted."
+Description of use:,"On automatic adaptation, this activity is automatically started upon the request from the Adaptation DM activity. On supervised adaptation, go to the Adaptation Dashboard (within the SUPERSEDE Front-end), select the ""Suggested Adaptations"" tab, browse for the adaptation to be enacted, select it, and push on the ""Enact"" button. Upon completion, verify the result in the ""Enacted Adaptations"" tab."
+Context:,"The adaptation enactment platform receives a request to enact a system configuration triggered by:
+- The Adaptation DM activity as soon as a new optimal configuration has been computed (automatic adaptation).
+- The Adaptation Dashboard, requested by a human supervisor, who selected a computed adaptation and requested its enactment."
+Roles involved:,<System Manager/Supervisor<ROL-WP4-05>>
+Input artifacts:,"Optimal configuration (Feature Configuration/Feature Model), Current configuration, system base model (UML), variant models (UML), adaptability models (aspect)"
+Output artifacts:,Adapted system artifacts (platform specific) execution 
+Tools:,Adaptation Enactment Platform (<DAPPLE<TOO-WP4-02>>): Adapter/Enactor
+Related activities:,requires <Adaptation DM<ACT-WP3-10>>
+,
+ID:,ACT-WP4-11
+Name:,Reconfiguration
+MAPE phase:,Enact - adaptation
+Responsible:,David Ameller
+Description:,Activity in which a tool is reconfigured dynamically.
+Description of use:,"See description of use for ""Feedback gathering reconfiguration"" or ""Monitoring reconfiguration""."
+Context:,The company requires that a tool of SUPERSEDE can be reconfigured dynamically at runtime.
+Roles involved:,<System Manager/Supervisor<ROL-WP4-05>>
+Input artifacts:,Reconfiguration plan (technologically independent)
+Output artifacts:,Reconfiguration instruction (technologically dependant)
+Tools:,None
+Related activities:,requires <Adaptation DM<ACT-WP3-10>>
+,
+ID:,ACT-WP4-11a
+Name:,Feedback gathering reconfiguration
+MAPE phase:,Enact - adaptation
+Responsible:,David Ameller
+Description:,Activity in which a feedback gathering tool is reconfigured dynamically.
+Description of use:,"On automatic reconfiguration, this activity is automatically started upon the request from the DM activity. On supervised adaptation, go to the Adaptation Dashboard (within the SUPERSEDE Front-end), select the ""Suggested Adaptations"" tab, browse for the adaptation to be enacted, select it, and push on the ""Enact"" button. Upon completion, verify the result in the ""Enacted Adaptations"" tab."
+Context:,"The company requires that the Feedback gathering tool of SUPERSEDE can be reconfigured dynamically at runtime (e.g. they have space limitations to store the feedback, bandwidth limitations, etc.)."
+Roles involved:,<System Manager/Supervisor<ROL-WP4-05>>
+Input artifacts:,A feedback gathering reconfiguration plan (technologically independent)
+Output artifacts:,A feedback gathering reconfiguration instruction (technologically dependant)
+Tools:,<Monitoring and Feedback Gathering Reconfiguration tool<TOO-WP4-03>>
+Related activities:,inherits <Reconfiguration<ACT-WP4-11>>
+,
+ID:,ACT-WP4-11b
+Name:,Monitoring reconfiguration
+MAPE phase:,Enact - adaptation
+Responsible:,Marc Oriol
+Description:,Activity in which a monitor is reconfigured dynamically.
+Description of use:,"On automatic reconfiguration, this activity is automatically started upon the request from the DM activity. On supervised adaptation, go to the Adaptation Dashboard (within the SUPERSEDE Front-end), select the ""Suggested Adaptations"" tab, browse for the reconfiguration to be enacted, select it, and push on the ""Enact"" button. Upon completion, verify the result in the ""Enacted Adaptations"" tab."
+Context:,"The company requires that the Monitors of SUPERSEDE can be reconfigured dynamically at runtime (e.g. they have space limitations to store the monitored data, bandwidth limitations, etc.)."
+Roles involved:,<System Manager/Supervisor<ROL-WP4-05>>
+Input artifacts:,A monitoring reconfiguration plan (technologically independent)
+Output artifacts:,A monitoring reconfiguration instruction (technologically dependant)
+Tools:,<Monitoring and Feedback Gathering Reconfiguration tool<TOO-WP4-03>>
+Related activities:,inherits <Reconfiguration<ACT-WP4-11>>

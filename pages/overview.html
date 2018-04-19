@@ -1,0 +1,28 @@
+
+<div id="graphMainDiv" class="row">
+    <div class="col-lg-12"> 
+        <div class="panel-body supersedeGraph">
+            <div  class="svg-container" flat-graph data="d3Data" xyz="d3Data2" on-click="d3OnClick(item)" ></div>
+        </div>
+    </div>
+</div>
+
+<div class="row" >
+    <!-- display:block and fixed height is required to avoid the horizontal scrollbar from jumping around when the selected node changes -->
+    <div class="col-lg-12" style="display:block; height:800px">
+        <div style="margin-right:20px; position:absolute; max-width: 800px"
+             ng-if="showDetails"
+             ng-style="{'top':selectedNodeYOffset,'left':selectedNodeXOffset}" 
+             ng-class="selectedNodeStyle">   <!--class="panel panel-yellow" -->  
+            <div id="{{d3Data.htmlDetails[selectedNodeId].id}}" class="panel-heading"> {{d3Data.htmlDetails[selectedNodeId].title}}</div>
+            <div class="panel-body"> 
+                <div class="row">
+                    <div style="margin-bottom: 5px" class="col-lg-12" 
+                         ng-repeat="entry in d3Data.htmlDetails[selectedNodeId].content track by $index">
+                        <label style="margin-bottom: 0px">{{entry.key}}</label> <span ng-bind-html="entry.value"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

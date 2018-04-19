@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>SUPERSEDE Method Explorer</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- MetisMenu CSS -->
+        <link href="vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="vendor/bootstrap-admin/css/sb-admin-2.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css"
+              rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="pages/css/style.css" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+                    <![endif]-->
+
+        <!-- favicon stuff generated with https://realfavicongenerator.net -->
+        <link rel="apple-touch-icon" sizes="180x180" href="pages/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="pages/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="pages/img/favicon-16x16.png">
+        <link rel="manifest" href="pages/img/site.webmanifest">
+        <link rel="mask-icon" href="pages/img/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="pages/img/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="pages/img/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <!--same font as wordpress template-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    </head>
+    <body ng-app="myApp" ng-controller="defaultController">
+        <div id="wrapper">
+            <!--Navigation--> 
+            <nav class="navbar navbar-default navbar-static-top" role="navigation"
+                 style="margin-bottom: 0">
+                <!--  <div class="ak-container">
+                                                    <div class="site-branding"> 
+                                                        <a href="https://www.supersede.eu/" rel="home"> 
+                                                            <img src="https://www.supersede.eu/wp-content/uploads/2015/07/cropped-SupersedeLogo_outline.png" alt="Supersede"> </a>
+                                                    </div>
+                                                    <div class="right-header clearfix">
+                                                        <div class="header-text">info@supersede.eu</div>
+                                                    </div>
+                                                </div>-->
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span> <span
+                            class="icon-bar"></span> <span class="icon-bar"></span> <span
+                            class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        SUPERSEDE Method Explorer</a>
+                </div>
+            </nav>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li><a href="#!overview"><i class="fa fa-sitemap fa-fw"></i>
+                                Overview</a></li>
+
+                        <li><a href="#!activities"><i class="fa fa-puzzle-piece"></i> 
+                                Method Library<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="#!activities" ><i class="fa fa-cog fa-fw"></i>
+                                        Activities<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li><a href="#!activities?phase=monitor"><i class="fa fa-clipboard"></i></i> Monitoring</a></li>
+                                        <li><a href="#!activities?phase=analyse"><i class="fa fa-bar-chart"></i></i> Analysis</a></li>
+                                        <li><a href="#!activities?phase=plan"><i class="fa fa-compress"></i> Plan</a></li>
+                                        <li><a href="#!activities?phase=enact"><i class="fa fa-play"></i> Enactment</a></li>
+                                    </ul></li>
+                                <!--   <li><a href="#!activities">
+                                        <i class="fa fa-cog fa-fw"></i>
+                                         Activities</a></li>-->
+                                <!-- <li><a href="#!artifacts">
+                                       <i class="fa fa-copy fa-fw"></i>
+                                       Artifacts</a></li>-->
+                                <li><a href="#!activities" ><i class="fa fa-copy fa-fw"></i>
+                                        Artifacts<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li><a href="#!artifacts?phase=monitor"><i class="fa fa-clipboard"></i></i> Monitoring</a></li>
+                                        <li><a href="#!artifacts?phase=analyse"><i class="fa fa-bar-chart"></i></i> Analysis</a></li>
+                                        <li><a href="#!artifacts?phase=plan"><i class="fa fa-compress"></i> Plan</a></li>
+                                        <li><a href="#!artifacts?phase=enact"><i class="fa fa-play"></i> Enactment</a></li>
+                                    </ul></li>
+
+                                <li><a href="#!roles">
+                                        <i class="fa fa-user fa-fw"></i>
+                                        Roles</a></li>
+                                <li><a href="#!tools">
+                                        <i class="fa fa-wrench fa-fw"></i>
+                                        Tools</a></li>
+                            </ul></li>
+                        <li><a href="#!configure"><i class="fa fa-cogs fa-fw"></i>
+                                Configure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="page-wrapper">
+                <div id="main">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendor/metisMenu/metisMenu.min.js"></script>
+        <script src="vendor/bootstrap-admin/js/sb-admin-2.js"></script>
+
+        <script src="vendor/angular/1.6.8/angular.min.js"></script>
+        <script src="vendor/angular/1.6.8/angular-sanitize.min.js"></script>
+        <script src="vendor/angular/1.6.8/angular-route.min.js"></script>
+        <script src="vendor/d3/4.12.2/d3.min.js"></script>
+        <script src="pages/scripts/app.js"></script>
+
+        <script src="pages/scripts/services/services.js"></script>
+        <script src="pages/scripts/services/pdfGen.js"></script>
+        <script src="pages/scripts/controllers/overviewController.js"></script>
+        <script src="pages/scripts/controllers/defaultController.js"></script>
+        <script src="pages/scripts/controllers/configureController.js"></script>
+
+        <script src="pages/scripts/directives/flatGraph.js"></script>
+
+        <script src='vendor/pdfmake/0.1.36/pdfmake.min.js'></script>
+        <script src='vendor/pdfmake/0.1.36/vfs_fonts.js'></script>
+
+    </body>
+</html>

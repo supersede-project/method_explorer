@@ -1,0 +1,101 @@
+,
+ID:,ROL-WP1-01
+Name:,End-user
+MAPE phase:,Monitor
+Responsible:,Norbert and Marc
+Description:,"An end-user of a software system has experience in using the software and is willing to communicate this experience. Furthermore, the end-user ideally allows monitoring of her system usage by giving consent."
+Related roles:,
+,,,
+ID:,ROL-WP2-01,,
+Name:,Data steward,,
+MAPE phase:,Analyse,,
+Responsible:,Sergi & Alberto,,
+Description:,"A data steward is responsible of data management tasks, which are necessary to aid data analysts to run their analytical processes. On the one hand, she knows the domain of interest and is capable of creating a conceptualization of it (e.g., via an integration-oriented ontology). On the other hand, she identifies potential data sources and queries them in order to fetch instances related to the previously defined conceptualization.",,
+Related roles:,Teams up with: the role from WP1 in charge of the monitors and feedback tools. Does it exist?,,"XF: asked to WP1 responsibles, waiting for response"
+,,,
+ID:,ROL-WP2-02,,
+Name:,Data analyst,,
+MAPE phase:,Analyse,,
+Responsible:,Sergi & Alberto,,
+Description:,"A data analyst is responsible of defining descriptive, predictive and prescriptive analytical processes on top of the data made available by the data steward. The data analyst knows what are the relevant data to decision makers, and thus is capable of preparing such processes also enhanced with metadata such as provenance, liveliness or other data quality metrics.",,
+Related roles:,Teams up with: <Decision maker<ROL-WP3-01>>,,
+,
+ID:,ROL-WP3-01
+Name:,Decision-maker
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,This is a generic role related to the generic decision-making activities in the context of the organization.
+Related roles:,
+,
+ID:,ROL-WP3-02
+Name:,Decision-making Supervisor
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,"The role is related to preparation of the context for the decision-making deciding: the group of Decision-making Negotiators, Decision-making Decision Providers, the Requirements to decide on, the criteria to be used in the decision-making activity, the importance of the criteria and the expertise of the opinion providers on each one of the criteria."
+Related roles:,"Specializes: <Decision-maker<ROL-WP3-01>>
+Teams up with: <Decision-making Negotiator<ROL-WP3-03>>, <Decision-making Decision Provider<ROL-WP3-04>>"
+,
+ID:,ROL-WP3-03
+Name:,Decision-making Negotiator
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The role is related to the possibility of enabling negotiation among the Decision-making Decision Providers about their preferences.
+Related roles:,"Specializes: <Decision-maker<ROL-WP3-01>>
+Teams up with: <Decision-making Supervisor<ROL-WP3-02>>, <Decision-making Decision Provider<ROL-WP3-04>>"
+,
+ID:,ROL-WP3-04
+Name:,Decision-making Decision Provider
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The role is related to the specification of the priority among the requirements.
+Related roles:,"Specializes: <Decision-maker<ROL-WP3-01>>
+Teams up with: <Decision-making Supervisor<ROL-WP3-02>>, <Decision-making Negotiator<ROL-WP3-03>>"
+,
+ID:,ROL-WP3-05
+Name:,Requirements analyst
+MAPE phase:,Plan
+Responsible:,Angelo
+Description:,The role is related to the specification and analysis of requirements.
+Related roles:,"Teams up with: <Decision-making Supervisor<ROL-WP3-02>>, <Decision-making Negotiator<ROL-WP3-03>>, <Decision-making Decision Provider<ROL-WP3-04>>"
+,
+ID:,ROL-WP4-01
+Name:,Project leader
+MAPE phase:,"Enact - evolution -- any other WP1-3 leader may wish to add ""his"" phase here"
+Responsible:,David Ameller
+Description:,"A project leader is the person in charge of a software project. S/he is responsible of supervising and make project level technical decisions (e.g., managerial decisions, but also decisions that impact on the architecture or technologies used in the project). Business level decisions not commonly under his/her control."
+Related roles:,Teams up with <Project development team<ROL-WP4-04>>
+,
+ID:,ROL-WP4-02
+Name:,Development resource
+MAPE phase:,External
+Responsible:,David Ameller
+Description:,"A development resource is an abstraction to represent any asset or good that can perform some task in the software development process. The most common resource is the developer, but other kinds of resources may be needed depending on the kind of project (e.g., computational time)."
+Related roles:,
+,
+ID:,ROL-WP4-03
+Name:,Developer
+MAPE phase:,External
+Responsible:,David Ameller
+Description:,"A developer is a person who takes responsibility of a development task (e.g., implementation, design, test, etc.)."
+Related roles:,Specializes <Development resource<ROL-WP4-02>>
+,
+ID:,ROL-WP4-04
+Name:,Project development team
+MAPE phase:,External
+Responsible:,David Ameller
+Description:,A project development team is a particular set of developers that work together in a particular project.
+Related roles:,Set of <Developer<ROL-WP4-03>>
+,
+ID:,ROL-WP4-05
+Name:,System Manager/Supervisor
+MAPE phase:,Enact - adaptation
+Responsible:,Yosu Gorroñogoitia
+Description:,A System Manager or Supervisor inspects the adaptations suggested by the Adaptation DM Optimizer through the Adaptation Dashboard and decides what adaptations to enact.
+Related roles:,
+,
+ID:,ROL-WP4-06
+Name:,IT dpt.
+MAPE phase:,Enact - adaptation
+Responsible:,David Ameller
+Description:,The department or the person in charge of the IT infrastructure of the organization.
+Related roles:,

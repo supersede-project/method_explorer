@@ -1,0 +1,33 @@
+ID,Name,Manualizable,Type,WP,User involvement,Resources required,Project size,Privacy,Scope,Sensitivity,Delivery strategy,Technical roles,Type of user,Business domain,Technologies and system architecture,Accuracy,Motivation/engagement,Assumptions
+ACT-WP1-01,Data collection infrastructure deployment and configuration,,Activity,WP1,"Medium,Low","Medium,Low","Small, Medium, Large",,,,,Project Development Team,Technician,,,N/A,Medium,"Low , N/A"
+ACT-WP1-01a,Feedback gathering manual configuration,X,Activity,WP1,"Medium,Low","Medium,Low","Small, Medium, Large",,,,,Project Development Team,Technician,,,N/A,Medium,"Low , N/A"
+ACT-WP1-01b,Monitoring tool manual configuration,X,Activity,WP1,"Medium,Low","Medium,Low","Small, Medium, Large",,,,,Project Development Team,Technician,,,N/A,Medium,"Low , N/A"
+ACT-WP1-02,Feedback collection,X,Activity,WP1,High,Low,"Small, Medium, Large","High,Medium","Multi-language, Multiple sources",,"Continuous, Frequent, Rare",End-user,End-user,Independent,"Web-based, Mobile",Medium,"Medium,High","Low , N/A"
+ACT-WP1-03,Monitoring data collection,,Activity,WP1,Low,"High,Medium,Low","Small, Medium, Large","High,Medium,Low","Multi-language, Multiple sources",,"Continuous, Frequent, Rare",End-user,End-user,Independent,"Web-based, Mobile","Low,High",Medium,"Low , N/A"
+ACT-WP1-03a,QoS monitoring,,Activity,WP1,Low,"High,Medium,Low","Small, Medium, Large",Low,,,"Continuous, Frequent, Rare",,,Independent,"Web-based, Mobile",High,N/A,"Low , N/A"
+ACT-WP1-03b,Social network monitoring,X,Activity,WP1,Low,"High,Medium,Low","Small, Medium, Large",Medium,Multi-language,,"Continuous, Frequent, Rare",End-user,End-user,Independent,,Low,Medium,"Low , N/A"
+ACT-WP1-03c,Usage monitoring,,Activity,WP1,Low,"High,Medium","Small, Medium, Large",High,Multi-language,,"Continuous, Frequent, Rare",End-user,End-user,Independent,Web-based,High,N/A,"Low , N/A"
+ACT-WP2-01,Big Data management infrastructure deployment,,Activity,WP2,Medium,Medium,Large,Low,,,,Big Data Specialist,Technician,Independent,,High,High,
+ACT-WP2-02,Domain ontology definition,,Activity,WP2,High,High,Medium,Low,Multi-language,,,Data steward,Technician,Independent,,Medium,Medium,
+ACT-WP2-03,Definition of complex event recognition rules,,Activity,WP2,Medium,Medium,Large,Medium,,,,Analyst,Technician,Independent,,Medium,Medium,
+ACT-WP2-04,Source ontology extraction,,Activity,WP2,High,Medium,Large,Low,,,,Data steward,Technician,Independent,,High,High,
+ACT-WP2-05,Event and pattern detection,,Activity,WP2,Low,Low,Large,Low,,,,,,Independent,,High,High,
+ACT-WP3-01,Decision making infrastructure deployment,,Activity,WP3,Low,Medium,"Small, Medium, Large",Medium,"Multi-language, Multiple sources",,Rare,Decision-making Supervisor,Decision-maker,Independent,Web-based,N/A,N/A,N/A
+ACT-WP3-01a,Installation as a service,,Activity,WP3,Low,Medium,"Small, Medium, Large",Medium,"Multi-language, Multiple sources",,Rare,Decision-making Supervisor,Decision-maker,Independent,Web-based,N/A,N/A,N/A
+ACT-WP3-01b,Decision proccess set-up,,Activity,WP3,Low,Medium,"Small, Medium, Large",Low,"Multi-language, Multiple sources",,Frequent,Decision-making Supervisor,Decision-maker,Independent,Web-based,High,Medium,High
+ACT-WP3-02,Requirements decision activity,,Activity,WP3,,,,,,,,,,,,,,
+ACT-WP3-02a,Requirements collaborative editing,X,Activity,WP3,Medium,Medium,"Small, Medium, Large",Medium,"Multi-language, Multiple sources",,Frequent,Requirements analyst,Decision-maker,Independent,Web-based,N/A,Medium,Medium
+ACT-WP3-02b,Requirements similarity check,X,Activity,WP3,Low,Low,"Small, Medium, Large",Low,Multi-language,,Frequent,Requirements analyst,Technician,Data-intensive,Web-based,Medium,N/A,N/A
+ACT-WP3-02c,Requirements prioritization,X,Activity,WP3,,,,,,,,,,,,,,
+ACT-WP3-02c1,Requirements prioritization with AHP,,Activity,WP3,High,High,Small,Low,Multi-language,Sensible,Frequent,Decision-maker,Technician,Independent,Web-based,High,Low,High
+ACT-WP3-02c2,Requirements prioritization via Genetic Algorithm,,Activity,WP3,High,High,Small,Low,Multi-language,Sensible,Frequent,Decision-maker,Technician,Independent,Web-based,High,Medium,High
+ACT-WP3-02c3,Requirements prioritization with gamified AHP,,Activity,WP3,Medium,Medium,Medium,Low,Multi-language,Sensible,Continuous,Decision-maker,Technician,Independent,Web-based,Medium,Medium,Low
+ACT-WP3-10,Adaptive decision making,X,Activity,WP3,Low,"Medium, High","Medium, Large",Low,"Multi-language, Multiple sources",,Continuous,Decision-maker,Technician,Data-intensive,,High,N/A,High
+ACT-WP4-01,Release planning infrastructure deployment,X,Activity,WP4,Low,Low,"Small, Medium, Large",Low,"Multi-language, Multiple sources",,Frequent,Project leader,Technician,Independent,Web-based,N/A,N/A,N/A
+ACT-WP4-01a,RePlan tool set-up,,Activity,WP4,Low,Medium,"Small, Medium, Large",Low,"Multi-language, Multiple sources",,Frequent,Project leader,Technician,Independent,Web-based,N/A,N/A,N/A
+ACT-WP4-01b,Project configuration,,Activity,WP4,Low,Low,"Small, Medium, Large",Low,"Multi-language, Multiple sources",,Frequent,Project leader,Technician,Independent,Web-based,N/A,N/A,N/A
+ACT-WP4-02,Release planning,X,Activity,WP4,Low,Low,"Small, Medium, Large",Low,"Multi-language, Multiple sources",,Frequent,Project leader,Technician,Independent,Web-based,High,Medium,Medium
+ACT-WP4-10,Adaptation Enactment,X,Activity,WP4,Low,Low,"Small, Medium, Large",Low,"Multi-language, Multiple sources",,Frequent,System Manager/Supervisor,Technician,Independent,Web-based,High,Medium,Medium
+ACT-WP4-11,Reconfiguration,,Activity,WP4,Low,Low,"Small, Medium, Large",Low,"Multi-language, Multiple sources",,Frequent,System Manager/Supervisor,Technician,Independent,Web-based,N/A,N/A,N/A
+ACT-WP4-11a,Feedback gathering reconfiguration,X,Activity,WP4,Low,Low,"Small, Medium, Large",Low,"Multi-language, Multiple sources",,Frequent,System Manager/Supervisor,Technician,Independent,Web-based,High,Low,Medium
+ACT-WP4-11b,Monitoring reconfiguration,,Activity,WP4,Low,Low,"Small, Medium, Large",Low,"Multi-language, Multiple sources",,Frequent,System Manager/Supervisor,Technician,Independent,Web-based,High,Low,Medium
