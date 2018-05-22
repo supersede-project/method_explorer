@@ -9,6 +9,11 @@
     padding: 0px;
 }
 
+label.constraint-header {
+    font-size: larger;
+}
+span.constraint-text {
+}
 
 svg text {
     fill: black;

@@ -157,7 +157,7 @@
                             console.log(conditions)
 
                             //initialize initial, don't forget to uncomment.
-                            //$scope.onConstraintChange();
+                            $scope.onConstraintChange();
 
                         });
                     });

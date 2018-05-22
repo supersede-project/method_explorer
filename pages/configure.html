@@ -37,9 +37,9 @@
                                 <div class="form-group" >
                                     <div ng-repeat="constraint in currentPage.constraints" 
                                          class="form-group" >
-                                        <label> {{constraint.title}} </label>
+                                        <label class="constraint-header"> {{constraint.title}} </label>
                                         <br>
-                                        <span ng-bind-html="constraint.description"></span>
+                                        <span  class="constraint-text" ng-bind-html="constraint.description"></span>
 
                                         <div ng-if="!constraint.isMulti" 
                                              class="radio" style="margin-left:10px" ng-repeat="value in constraint.uivalues" >
@@ -88,9 +88,9 @@
                             class="btn  btn-primary btn-ellipse ">
                             <i class="fa fa-print"></i> Export Deployment Descriptor             </button>
                         <div style="height:10px"></div>
-                        Note: If you've not made any change to the constraints,
+<!--                        Note: If you've not made any change to the constraints,
                         the above and resulting pdf contain all content
-                        (this bug is on purpose for easier testing and typo checking).
+                        (this bug is on purpose for easier testing and typo checking).-->
 
 
                     </div>
