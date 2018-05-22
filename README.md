@@ -16,7 +16,7 @@ The order of rows is the same as in the webpage.
 - The ‘Responsible’ field is always ignored, the ‘Mape-phase’ field is used to create the 4 categories and not displayed.
 - Row values can contain newlines, commas and “.
 - Hyperlinks are automatically detected, they must start with http:// or https:// and continue until the first blank character.
-- Intersite Hyperlinks are created by the syntax <arbitrary hyperlinked text<ID>>, where ID must be a valid activity, role, tool or artifact ID.
+- Intersite Hyperlinks are created by the syntax <arbitrary hyperlinked text < ID>>, where ID must be a valid activity, role, tool or artifact ID.
 Note; all styling information in the doc eg. italic, bold or colors are lost in the csv export.
 
 ## Criteria, criteriaGroups, criteriaValues 
