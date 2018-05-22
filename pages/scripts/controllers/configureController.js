@@ -45,13 +45,13 @@
                     var conditions = {};
 
                     $scope.onConstraintChange = function (fuckery,constraintId,valueId) {
-                        console.log(constraintId, valueId);                        
+//                        console.log(constraintId, valueId);                        
                         var c = $scope.d3ConstraintValue;
                         
-                              console.log(c[constraintId][valueId]);  
-                        if(fuckery && c[constraintId][valueId]){
-//                            delete c[constraintId][valueId];                            
-                        }
+//                              console.log(c[constraintId][valueId]);  
+//                        if(fuckery && c[constraintId][valueId]){
+////                            delete c[constraintId][valueId];                            
+//                        }
                         
                         var res = "";
                         res = Object.keys(c).reduce(function (acc, cur) {
@@ -80,8 +80,8 @@
                             return !d.removed || d.manualizable;
                         });
                         console.log(res + "\n");
-                        console.log(constraintId, valueId);                             
-                        console.log(c[constraintId][valueId]);  
+//                        console.log(constraintId, valueId);                             
+//                        console.log(c[constraintId][valueId]);  
 
                     };
 
