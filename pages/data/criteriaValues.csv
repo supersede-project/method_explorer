@@ -1,33 +1,33 @@
-ID,Name,Manualizable,Type,WP,User involvement,Resources required,Project size,Privacy,Scope,Data-intensive domain,Delivery strategy,Technical roles,Type of user,Business domain,System architecture,Accuracy,Motivation,Assumptions
-ACT-WP1-01,Data collection infrastructure deployment and configuration,,Activity,WP1,"Medium,Low","Medium,Low","Small, Medium, Large",,,,,Project Development Team,Technician,,,N/A,Medium,"Low , N/A"
-ACT-WP1-01a,Feedback gathering manual configuration,X,Activity,WP1,"Medium,Low","Medium,Low","Small, Medium, Large",,,,,Project Development Team,Technician,,,N/A,Medium,"Low , N/A"
-ACT-WP1-01b,Monitoring tool manual configuration,X,Activity,WP1,"Medium,Low","Medium,Low","Small, Medium, Large",,,,,Project Development Team,Technician,,,N/A,Medium,"Low , N/A"
-ACT-WP1-02,Feedback collection,X,Activity,WP1,High,Low,"Small, Medium, Large","Strong, Fair",,,"Continuous, Frequent, Rare",End-user,End-user,Independent,"Web-based, Mobile",Medium,"Medium,High","Low , N/A"
-ACT-WP1-03,Monitoring data collection,,Activity,WP1,Low,"High,Medium,Low","Small, Medium, Large","Strong, Fair, Not-critical",,,"Continuous, Frequent, Rare",End-user,End-user,Independent,"Web-based, Mobile","Low,High",Medium,"Low , N/A"
-ACT-WP1-03a,QoS monitoring,,Activity,WP1,Low,"High,Medium,Low","Small, Medium, Large",Not-critical,,,"Continuous, Frequent, Rare",,,Independent,"Web-based, Mobile",High,N/A,"Low , N/A"
-ACT-WP1-03b,Social network monitoring,X,Activity,WP1,Low,"High,Medium,Low","Small, Medium, Large",Fair,,,"Continuous, Frequent, Rare",End-user,End-user,Independent,,Low,Medium,"Low , N/A"
-ACT-WP1-03c,Usage monitoring,,Activity,WP1,Low,"High,Medium","Small, Medium, Large",Strong,,,"Continuous, Frequent, Rare",End-user,End-user,Independent,Web-based,High,N/A,"Low , N/A"
-ACT-WP2-01,Big Data management infrastructure deployment,,Activity,WP2,Medium,Medium,Large,Not-critical,,,,Big Data Specialist,Technician,Independent,,High,High,
-ACT-WP2-02,Domain ontology definition,,Activity,WP2,High,High,Medium,Not-critical,,,,Data steward,Technician,Independent,,Medium,Medium,
-ACT-WP2-03,Definition of complex event recognition rules,,Activity,WP2,Medium,Medium,Large,Fair,,,,Analyst,Technician,Independent,,Medium,Medium,
-ACT-WP2-04,Source ontology extraction,,Activity,WP2,High,Medium,Large,Not-critical,,,,Data steward,Technician,Independent,,High,High,
-ACT-WP2-05,Event and pattern detection,,Activity,WP2,Low,Low,Large,Not-critical,,,,,,Independent,,High,High,
-ACT-WP3-01,Decision making infrastructure deployment,,Activity,WP3,Low,Medium,"Small, Medium, Large",Fair,,,Rare,Decision-making Supervisor,Decision-maker,Independent,Web-based,N/A,N/A,N/A
-ACT-WP3-01a,Installation as a service,,Activity,WP3,Low,Medium,"Small, Medium, Large",Fair,,,Rare,Decision-making Supervisor,Decision-maker,Independent,Web-based,N/A,N/A,N/A
-ACT-WP3-01b,Decision proccess set-up,,Activity,WP3,Low,Medium,"Small, Medium, Large",Not-critical,,,Frequent,Decision-making Supervisor,Decision-maker,Independent,Web-based,High,Medium,High
-ACT-WP3-02,Requirements decision activity,,Activity,WP3,,,,,,,,,,,,,,
-ACT-WP3-02a,Requirements collaborative editing,X,Activity,WP3,Medium,Medium,"Small, Medium, Large",Fair,,,Frequent,Requirements analyst,Decision-maker,Independent,Web-based,N/A,Medium,Medium
-ACT-WP3-02b,Requirements similarity check,X,Activity,WP3,Low,Low,"Small, Medium, Large",Not-critical,,,Frequent,Requirements analyst,Technician,Data-intensive,Web-based,Medium,N/A,N/A
-ACT-WP3-02c,Requirements prioritization,X,Activity,WP3,,,,,,,,,,,,,,
-ACT-WP3-02c1,Requirements prioritization with AHP,,Activity,WP3,High,High,Small,Not-critical,,,Frequent,Decision-maker,Technician,Independent,Web-based,High,Low,High
-ACT-WP3-02c2,Requirements prioritization via Genetic Algorithm,,Activity,WP3,High,High,Small,Not-critical,,,Frequent,Decision-maker,Technician,Independent,Web-based,High,Medium,High
-ACT-WP3-02c3,Requirements prioritization with gamified AHP,,Activity,WP3,Medium,Medium,Medium,Not-critical,,,Continuous,Decision-maker,Technician,Independent,Web-based,Medium,Medium,Low
-ACT-WP3-10,Adaptive decision making,X,Activity,WP3,Low,"Medium, High","Medium, Large",Not-critical,,,Continuous,Decision-maker,Technician,Data-intensive,,High,N/A,High
-ACT-WP4-01,Release planning infrastructure deployment,X,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,,,Frequent,Project leader,Technician,Independent,Web-based,N/A,N/A,N/A
-ACT-WP4-01a,RePlan tool set-up,,Activity,WP4,Low,Medium,"Small, Medium, Large",Not-critical,,,Frequent,Project leader,Technician,Independent,Web-based,N/A,N/A,N/A
-ACT-WP4-01b,Project configuration,,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,,,Frequent,Project leader,Technician,Independent,Web-based,N/A,N/A,N/A
-ACT-WP4-02,Release planning,X,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,,,Frequent,Project leader,Technician,Independent,Web-based,High,Medium,Medium
-ACT-WP4-10,Adaptation Enactment,X,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,,,Frequent,System Manager/Supervisor,Technician,Independent,Web-based,High,Medium,Medium
-ACT-WP4-11,Reconfiguration,,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,,,Frequent,System Manager/Supervisor,Technician,Independent,Web-based,N/A,N/A,N/A
-ACT-WP4-11a,Feedback gathering reconfiguration,X,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,,,Frequent,System Manager/Supervisor,Technician,Independent,Web-based,High,Low,Medium
-ACT-WP4-11b,Monitoring reconfiguration,,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,,,Frequent,System Manager/Supervisor,Technician,Independent,Web-based,High,Low,Medium
+ID,Name,Manualizable,Type,WP,User involvement,Resources required,Project size,Privacy,Language scope,Data source scope,Data-intensive domain,Delivery strategy,Technical roles,Type of user,Business domain,System architecture,Accuracy,Motivation,Assumptions
+ACT-WP1-01,Data collection infrastructure deployment and configuration,,Activity,WP1,"Medium,Low","Medium,Low","Small, Medium, Large",,,,,,Project Development Team,Technician,,,N/A,Medium,"Low , N/A"
+ACT-WP1-01a,Feedback gathering manual configuration,X,Activity,WP1,"Medium,Low","Medium,Low","Small, Medium, Large",,,,,,Project Development Team,Technician,,,N/A,Medium,"Low , N/A"
+ACT-WP1-01b,Monitoring tool manual configuration,X,Activity,WP1,"Medium,Low","Medium,Low","Small, Medium, Large",,,,,,Project Development Team,Technician,,,N/A,Medium,"Low , N/A"
+ACT-WP1-02,Feedback collection,X,Activity,WP1,High,Low,"Small, Medium, Large","Strong, Fair",Multiple,Multiple,Not necessarily data-intensive,,End-user,End-user,Independent,"Web-based, Mobile",Medium,"Medium,High","Low , N/A"
+ACT-WP1-03,Monitoring data collection,,Activity,WP1,Low,"High,Medium,Low","Small, Medium, Large","Strong, Fair, Not-critical",Multiple,Multiple,Not necessarily data-intensive,,End-user,End-user,Independent,"Web-based, Mobile","Low,High",Medium,"Low , N/A"
+ACT-WP1-03a,QoS monitoring,,Activity,WP1,Low,"High,Medium,Low","Small, Medium, Large",Not-critical,,,Not necessarily data-intensive,,,,Independent,"Web-based, Mobile",High,N/A,"Low , N/A"
+ACT-WP1-03b,Social network monitoring,X,Activity,WP1,Low,"High,Medium,Low","Small, Medium, Large",Fair,Multiple,,Not necessarily data-intensive,,End-user,End-user,Independent,,Low,Medium,"Low , N/A"
+ACT-WP1-03c,Usage monitoring,,Activity,WP1,Low,"High,Medium","Small, Medium, Large",Strong,Multiple,,Not necessarily data-intensive,,End-user,End-user,Independent,Web-based,High,N/A,"Low , N/A"
+ACT-WP2-01,Big Data management infrastructure deployment,,Activity,WP2,Medium,Medium,Large,Not-critical,,,Not necessarily data-intensive,,Big Data Specialist,Technician,Independent,,High,High,
+ACT-WP2-02,Domain ontology definition,,Activity,WP2,High,High,Medium,Not-critical,Multiple,,Not necessarily data-intensive,,Data steward,Technician,Independent,,Medium,Medium,
+ACT-WP2-03,Definition of complex event recognition rules,,Activity,WP2,Medium,Medium,Large,Fair,,,Not necessarily data-intensive,,Analyst,Technician,Independent,,Medium,Medium,
+ACT-WP2-04,Source ontology extraction,,Activity,WP2,High,Medium,Large,Not-critical,,,Not necessarily data-intensive,,Data steward,Technician,Independent,,High,High,
+ACT-WP2-05,Event and pattern detection,,Activity,WP2,Low,Low,Large,Not-critical,,,Not necessarily data-intensive,,,,Independent,,High,High,
+ACT-WP3-01,Decision making infrastructure deployment,,Activity,WP3,Low,Medium,"Small, Medium, Large",Fair,Multiple,Multiple,Not necessarily data-intensive,Few releases,Decision-making Supervisor,Decision-maker,Independent,Web-based,N/A,N/A,N/A
+ACT-WP3-01a,Installation as a service,,Activity,WP3,Low,Medium,"Small, Medium, Large",Fair,Multiple,Multiple,Not necessarily data-intensive,Few releases,Decision-making Supervisor,Decision-maker,Independent,Web-based,N/A,N/A,N/A
+ACT-WP3-01b,Decision proccess set-up,,Activity,WP3,Low,Medium,"Small, Medium, Large",Not-critical,Multiple,Multiple,,Frequent releases,Decision-making Supervisor,Decision-maker,Independent,Web-based,High,Medium,High
+ACT-WP3-02,Requirements decision activity,,Activity,WP3,,,,,,,,,,,,,,,
+ACT-WP3-02a,Requirements collaborative editing,X,Activity,WP3,Medium,Medium,"Small, Medium, Large",Fair,Multiple,Multiple,Not necessarily data-intensive,Frequent releases,Requirements analyst,Decision-maker,Independent,Web-based,N/A,Medium,Medium
+ACT-WP3-02b,Requirements similarity check,X,Activity,WP3,Low,Low,"Small, Medium, Large",Not-critical,Multiple,,Data-intensive,Frequent releases,Requirements analyst,Technician,Data-intensive,Web-based,Medium,N/A,N/A
+ACT-WP3-02c,Requirements prioritization,X,Activity,WP3,,,,,,,,,,,,,,,
+ACT-WP3-02c1,Requirements prioritization with AHP,,Activity,WP3,High,High,Small,Not-critical,Multiple,,Not necessarily data-intensive,Frequent releases,Decision-maker,Technician,Independent,Web-based,High,Low,High
+ACT-WP3-02c2,Requirements prioritization via Genetic Algorithm,,Activity,WP3,High,High,Small,Not-critical,Multiple,,Not necessarily data-intensive,Frequent releases,Decision-maker,Technician,Independent,Web-based,High,Medium,High
+ACT-WP3-02c3,Requirements prioritization with gamified AHP,,Activity,WP3,Medium,Medium,Medium,Not-critical,Multiple,,Not necessarily data-intensive,Continuous delivery,Decision-maker,Technician,Independent,Web-based,Medium,Medium,Low
+ACT-WP3-10,Adaptive decision making,X,Activity,WP3,Low,"Medium, High","Medium, Large",Not-critical,Multiple,Multiple,Data-intensive,Continuous delivery,Decision-maker,Technician,Data-intensive,,High,N/A,High
+ACT-WP4-01,Release planning infrastructure deployment,X,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,Multiple,Multiple,Not necessarily data-intensive,Frequent releases,Project leader,Technician,Independent,Web-based,N/A,N/A,N/A
+ACT-WP4-01a,RePlan tool set-up,,Activity,WP4,Low,Medium,"Small, Medium, Large",Not-critical,Multiple,Multiple,Not necessarily data-intensive,Frequent releases,Project leader,Technician,Independent,Web-based,N/A,N/A,N/A
+ACT-WP4-01b,Project configuration,,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,Multiple,Multiple,Not necessarily data-intensive,Frequent releases,Project leader,Technician,Independent,Web-based,N/A,N/A,N/A
+ACT-WP4-02,Release planning,X,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,Multiple,Multiple,Not necessarily data-intensive,Frequent releases,Project leader,Technician,Independent,Web-based,High,Medium,Medium
+ACT-WP4-10,Adaptation Enactment,X,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,Multiple,Multiple,Not necessarily data-intensive,Frequent releases,System Manager/Supervisor,Technician,Independent,Web-based,High,Medium,Medium
+ACT-WP4-11,Reconfiguration,,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,Multiple,Multiple,Not necessarily data-intensive,Frequent releases,System Manager/Supervisor,Technician,Independent,Web-based,N/A,N/A,N/A
+ACT-WP4-11a,Feedback gathering reconfiguration,X,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,Multiple,Multiple,Not necessarily data-intensive,Frequent releases,System Manager/Supervisor,Technician,Independent,Web-based,High,Low,Medium
+ACT-WP4-11b,Monitoring reconfiguration,,Activity,WP4,Low,Low,"Small, Medium, Large",Not-critical,Multiple,Multiple,Not necessarily data-intensive,Frequent releases,System Manager/Supervisor,Technician,Independent,Web-based,High,Low,Medium
