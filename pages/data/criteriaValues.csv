@@ -7,11 +7,11 @@ ACT-WP1-03,Monitoring data collection,,Activity,WP1,Low,"High,Medium,Low","Small
 ACT-WP1-03a,QoS monitoring,,Activity,WP1,Low,"High,Medium,Low","Small, Medium, Large",Not-critical,,,Not necessarily data-intensive,,,,Independent,"Web-based, Mobile",High,N/A,"Low , N/A"
 ACT-WP1-03b,Social network monitoring,X,Activity,WP1,Low,"High,Medium,Low","Small, Medium, Large",Fair,Multiple,,Not necessarily data-intensive,,End-user,End-user,Independent,,Low,Medium,"Low , N/A"
 ACT-WP1-03c,Usage monitoring,,Activity,WP1,Low,"High,Medium","Small, Medium, Large",Strong,Multiple,,Not necessarily data-intensive,,End-user,End-user,Independent,Web-based,High,N/A,"Low , N/A"
-ACT-WP2-01,Big Data management infrastructure deployment,,Activity,WP2,Medium,Medium,Large,Not-critical,,,Not necessarily data-intensive,,Big Data Specialist,Technician,Independent,,High,High,
-ACT-WP2-02,Domain ontology definition,,Activity,WP2,High,High,Medium,Not-critical,Multiple,,Not necessarily data-intensive,,Data steward,Technician,Independent,,Medium,Medium,
-ACT-WP2-03,Definition of complex event recognition rules,,Activity,WP2,Medium,Medium,Large,Fair,,,Not necessarily data-intensive,,Analyst,Technician,Independent,,Medium,Medium,
-ACT-WP2-04,Source ontology extraction,,Activity,WP2,High,Medium,Large,Not-critical,,,Not necessarily data-intensive,,Data steward,Technician,Independent,,High,High,
-ACT-WP2-05,Event and pattern detection,,Activity,WP2,Low,Low,Large,Not-critical,,,Not necessarily data-intensive,,,,Independent,,High,High,
+ACT-WP2-01,Big Data management infrastructure deployment,,Activity,WP2,Low,Medium,Large,Not-critical,,,Not necessarily data-intensive,,Big Data Specialist,Technician,Independent,,High,N/A,N/A
+ACT-WP2-02,Domain ontology definition,,Activity,WP2,High,High,Medium,Not-critical,Multiple,,Not necessarily data-intensive,,Data steward,Technician,Independent,,Medium,High,N/A
+ACT-WP2-03,Definition of complex event recognition rules,,Activity,WP2,Medium,Medium,Large,Fair,,,Not necessarily data-intensive,,Analyst,Technician,Independent,,Medium,High,N/A
+ACT-WP2-04,Source ontology extraction,,Activity,WP2,High,Low,Large,Not-critical,,,Not necessarily data-intensive,,Data steward,Technician,Independent,,High,Medium,N/A
+ACT-WP2-05,Event and pattern detection,,Activity,WP2,Low,Low,Large,Not-critical,,,Not necessarily data-intensive,,,,Independent,,High,N/A,N/A
 ACT-WP3-01,Decision making infrastructure deployment,,Activity,WP3,Low,Medium,"Small, Medium, Large",Fair,Multiple,Multiple,Not necessarily data-intensive,Few releases,Decision-making Supervisor,Decision-maker,Independent,Web-based,N/A,N/A,N/A
 ACT-WP3-01a,Installation as a service,,Activity,WP3,Low,Medium,"Small, Medium, Large",Fair,Multiple,Multiple,Not necessarily data-intensive,Few releases,Decision-making Supervisor,Decision-maker,Independent,Web-based,N/A,N/A,N/A
 ACT-WP3-01b,Decision proccess set-up,,Activity,WP3,Low,Medium,"Small, Medium, Large",Not-critical,Multiple,Multiple,,Frequent releases,Decision-making Supervisor,Decision-maker,Independent,Web-based,High,Medium,High
